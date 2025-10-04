@@ -6,17 +6,20 @@ LiquidCrystal_I2C lcd(0x27, col, row);
 
 int position = 0;
 
-void setup() {
+void setup()
+{
   lcd.init();
   lcd.backlight();
   lcd.clear();
 }
 
-void runAnimation() {
-  for (position = 0; position < col; position++) { // -6 biar "Jikalau" muat
+void runAnimation()
+{
+  for (position = 0; position < col; position++)
+  { // -6 biar "Jikalau" muat
     lcd.clear();
     lcd.setCursor(position, 0);
-    lcd.print("Ayo");
+    lcd.print("Jangan");
     lcd.setCursor(position, 1);
     lcd.print("Shalat");
     delay(400);
@@ -25,7 +28,8 @@ void runAnimation() {
   delay(2000); // berhenti sebentar setelah animasi selesai
 }
 
-void showMessages() {
+void showMessages()
+{
   lcd.clear();
   lcd.setCursor(4, 0);
   lcd.print("Pergi");
@@ -45,7 +49,8 @@ void showMessages() {
   lcd.clear();
 }
 
-void loop() {
-  runAnimation();   // jalankan animasi dulu
-  showMessages();   // setelah selesai, tampilkan pesan
+void loop()
+{
+  runAnimation(); // jalankan animasi dulu
+  showMessages(); // setelah selesai, tampilkan pesan
 }
