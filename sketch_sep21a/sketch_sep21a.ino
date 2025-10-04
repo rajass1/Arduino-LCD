@@ -19,7 +19,7 @@ void runAnimation()
   { // -6 biar "Jikalau" muat
     lcd.clear();
     lcd.setCursor(position, 0);
-    lcd.print("Jangan");
+    lcd.print("Ayo");
     lcd.setCursor(position, 1);
     lcd.print("Shalat");
     delay(400);
